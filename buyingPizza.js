@@ -20,5 +20,34 @@ function qtyPizza(){
     prix3=type3*parseInt(qty3);
     prix4=type4*parseInt(qty4);
     totale=prix1+prix2+prix3+prix4;
-    alert(totale);
+    alert("le prix totale de votre commande est: "+totale+"DH")
+}
+
+function over(ovot){
+    ovot.src="img/NicePng_banana-peel-png_1152366.png"
+}
+function out(ovot){
+    ovot.src="img/8-2-pizza-png-hd.png"
+}
+
+str="pizza"
+i=0;
+direction="D";
+function autotext(){
+t=setTimeout("autotext()",70);
+document.getElementById('h1').value=str.substring(0,i);
+if(direction=="D"){
+    if(i<str.length)
+        i++;
+else 
+    direction="G";
+}
+if(direction=="G"){
+    if(i>0)
+        i--;
+else 
+    direction="D";
+}
+
+
 }
